@@ -16,6 +16,3 @@ jobs:
       - checkout
       - python/install-packages:
           pkg-manager: pip
-      - run:
-          name: Run tests
-          command: python manage.py test
