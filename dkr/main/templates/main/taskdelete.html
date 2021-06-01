@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Видалити задачу
+{% endblock %}
+
+{% block content %}
+    <h1> Видалити задачу </h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="sumbit" class="btn btn-success">Видалити задачу</button>
+     </form>
+{% endblock %}

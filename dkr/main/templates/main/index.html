@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1> Список задач </h1>
+    {% if tasks %}
+        {% for element in tasks %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ element.title }}</h3>
+            <p>{{ element.task }}</p>
+            <a class="btn btn-warning" href="% url 'task-detail' %}">Деталі</a>
+            <a class="btn btn-danger" href="%url' task-delete' article.id %}">Видалити запис</a>
+            <a class="btn btn-info" href="%url' task-update' article.id %}">Редактувати запис</a>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>Покищо у Вас немає задач</p>
+    {% endif %}
+{% endblock %}
